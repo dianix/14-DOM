@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Datos formulario</title>
+	<style>
+        form {
+            margin-top: 100px;
+            margin-left: 30%;
+            margin-right: 30%;
+            max-width: 300px;
+            text-align: right;
+            font-family: sans-serif;
+        }
+        input, button, p {
+            margin: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+	
+	<form id="frm1">
+		Nombre: <input type="text" name="name" id="name"><br>
+		Mail: <input type="text" name="email" id="email"><br>
+		<button onclick="myFunction(); return false">Mostrar</button>
+		<div>
+		    <p id="mostrarNombre"></p>
+	        <p id="mostrarMail"></p>
+        </div>
+	</form> 
+	
+
+	<script>
+		function myFunction() {
+            var nombre = document.getElementById("name").value;
+            var correo = document.getElementById("email").value;
+            
+            document.getElementById("mostrarNombre").innerHTML = nombre;
+            document.getElementById("mostrarMail").innerHTML = correo;
+		}
+	</script>
+</body>
+</html>
